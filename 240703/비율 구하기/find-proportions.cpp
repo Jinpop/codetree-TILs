@@ -11,7 +11,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        char temp[11];
+        char temp[31];
         cin >> temp;
 
         m[temp]++;
