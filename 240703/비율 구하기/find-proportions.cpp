@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    map<string, float> m;
-    float n, total = 0;
+    map<string, double> m;
+    double n, total = 0;
     cin >> n;
 
     for (int i = 0; i < n; i++)
@@ -15,11 +15,13 @@ int main()
         cin >> temp;
 
         m[temp]++;
-        total++;
+        total ++;
     }
-
-    for (auto it = m.begin(); it != m.end(); it++){
-        cout << it->first << " " << it->second*(100/total) << "\n";
+    cout << fixed;
+    cout.precision(4);
+    for (auto it = m.begin(); it != m.end(); it++)
+    {
+        cout << it->first << " " << float(it->second * (100.0000 / total)) << "\n";
     }
 
     return 0;
